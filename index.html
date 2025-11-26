@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>کافی‌نت داشبورد | دسترسی سریع</title>
+
+  <!-- Bootstrap 5.3 RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  
+  <!-- فونت شبنم (یکی از زیباترین فونت‌های فارسی) -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" />
+
+  <!-- Animate.css + AOS برای انیمیشن‌های نرم و سریع -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- فونت‌آوسام ۶ -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- استایل اختصاصی ما -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <!-- هدر خوشگل -->
+    <div class="text-center mb-5" data-aos="fade-down">
+      <h1 class="display-4 fw-bold text-success mb-3">کافی‌نت داشبورد</h1>
+      <p class="lead text-muted">تمام خدمات دولتی و پراستفاده با یک کلیک</p>
+      <small class="text-muted">طراحی شده برای سرعت و زیبایی</small>
+    </div>
+
+    <!-- گرید کارت‌ها -->
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="services-grid">
+      <!-- کارت‌ها با جاوااسکریپت ساخته میشن -->
+    </div>
+  </div>
+
+  <!-- Bootstrap + AOS + JS اختصاصی -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50
+    });
+  </script>
+</body>
+</html>
