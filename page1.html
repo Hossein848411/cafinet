@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <!-- همون هد قبلی -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>قرعه‌کشی مشتریان کافی‌نت</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/page1.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- راست‌کلیک + نگه داشتن ۳ ثانیه روی این عنوان → وارد مدیریت -->
+    <h1 class="title" id="secretTrigger">قرعه‌کشی مشتریان</h1>
+    <p class="subtitle">۴ رقم آخر شماره مشتری رو وارد کن</p>
+
+    <!-- بقیه همون قبلی -->
+    <div class="input-section">
+      <input type="text" maxlength="4" id="numberInput" class="number-input" placeholder="مثلاً: ۱۲۳۴" />
+      <button id="addBtn" class="btn-add">اضافه کن</button>
+    </div>
+
+    <div class="numbers-grid" id="numbersList">
+      <div class="empty-state">هنوز شماره‌ای اضافه نشده</div>
+    </div>
+
+    <div class="counter">تعداد شرکت‌کننده: <span id="count">0</span> نفر</div>
+
+    <button id="startBtn" class="btn-start" disabled>شروع قرعه‌کشی</button>
+
+    <div class="winner-section" id="winnerSection">
+      <div class="rolling" id="rollingDisplay">????</div>
+      <h2 class="winner-text" id="winnerText"></h2>
+      <button id="restartBtn" class="btn-restart">قرعه‌کشی جدید</button>
+    </div>
+  </div>
+
+  <!-- پنل مدیریت مخفی -->
+  <div id="adminPanel" class="admin-panel">
+    <div class="admin-box">
+      <h2>مدیریت قرعه‌کشی (مخفی)</h2>
+      <p>رمز عبور را وارد کنید:</p>
+      <input type="password" id="adminPass" class="admin-input" placeholder="رمز عبور" />
+      <button id="adminLogin" class="btn-admin">ورود</button>
+      <p class="admin-error" id="adminError"></p>
+
+      <div id="adminControls" style="display:none; margin-top:30px;">
+        <h3>شماره برنده دلخواه (تقلب)</h3>
+        <input type="text" maxlength="4" id="cheatInput" class="admin-input" placeholder="مثلاً ۵۶۷۸" />
+        <button id="saveCheat" class="btn-admin">ذخیره شماره برنده</button>
+        <p class="admin-success" id="adminSuccess"></p>
+        <button id="adminClose" class="btn-close-admin">بستن پنل</button>
+  </div>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
