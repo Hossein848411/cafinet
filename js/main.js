@@ -67,8 +67,6 @@ const services = [
 
   // ===================== ابزارهای کاربردی =====================
   { name: "کم کردن حجم تصاویر", url: "https://opt.imum.ir/", icon: "fa-images", category: "other" },
-  { name: "عکس پرسنلی حرفه‌ای (Media.io)", url: "https://www.media.io/id-photo-maker.html", icon: "fa-camera", category: "other" },
-  { name: "عکس ID استودیویی (PhotoAiD)", url: "https://photoaid.com", icon: "fa-id-card", category: "other" },
   { name: "قرعه‌کشی مشتریان", url: "lottery.html", icon: "fa-dice-six", category: "other" },
 ];
 

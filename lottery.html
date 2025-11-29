@@ -1,61 +1,82 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <!-- همون هد قبلی -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>قرعه‌کشی مشتریان کافی‌نت</title>
+  
+  <!-- فونت شبنم -->
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/page1.css" />
+  
+  <!-- استایل اصلی -->
+  <link rel="stylesheet" href="css/page1.css" />
+  <link rel="stylesheet" href="css/lottery.css" />
 </head>
 <body>
 
   <div class="container">
-    <!-- راست‌کلیک + نگه داشتن ۳ ثانیه روی این عنوان → وارد مدیریت -->
+    <!-- نگه داشتن ۳ ثانیه روی عنوان → پنل مدیریت -->
     <h1 class="title" id="secretTrigger">قرعه‌کشی مشتریان</h1>
-    <p class="subtitle">۴ رقم آخر شماره مشتری رو وارد کن</p>
+    <p class="subtitle">۴ رقم آخر شماره مشتری رو وارد کن (هر بار وارد کردن = یک سهم)</p>
 
-    <!-- بقیه همون قبلی -->
     <div class="input-section">
-      <input type="text" maxlength="4" id="numberInput" class="number-input" placeholder="مثلاً: ۱۲۳۴" />
-      <button id="addBtn" class="btn-add">اضافه کن</button>
+      <input type="text" maxlength="4" id="numberInput" class="number-input" placeholder="مثلاً: ۱۲۳۴" autofocus />
+      <button id="addBtn" class="btn-add">
+        <i class="fas fa-plus"></i> اضافه کن
+      </button>
     </div>
 
+    <!-- لیست شرکت‌کنندگان -->
     <div class="numbers-grid" id="numbersList">
       <div class="empty-state">هنوز شماره‌ای اضافه نشده</div>
     </div>
 
-    <div class="counter">تعداد شرکت‌کننده: <span id="count">0</span> نفر</div>
+    <!-- آمار -->
+    <div class="stats">
+      <div class="counter"><i class="fas fa-users"></i> تعداد شرکت‌کننده: <strong id="count">0</strong> نفر</div>
+      <div class="counter"><i class="fas fa-ticket-alt"></i> کل شانس‌ها: <strong id="totalShares">0</strong></div>
+    </div>
 
-    <button id="startBtn" class="btn-start" disabled>شروع قرعه‌کشی</button>
+    <button id="startBtn" class="btn-start" disabled>
+      <i class="fas fa-play-circle"></i> شروع قرعه‌کشی (۳ برنده)
+    </button>
 
-    <div class="winner-section" id="winnerSection">
-      <div class="rolling" id="rollingDisplay">????</div>
-      <h2 class="winner-text" id="winnerText"></h2>
-      <button id="restartBtn" class="btn-restart">قرعه‌کشی جدید</button>
+    <!-- بخش برندگان -->
+    <div class="winner-section" id="winnerSection" style="display:none;">
+      <h2 class="lottery-title">در حال قرعه‌کشی...</h2>
+      <div class="rolling-display" id="rollingDisplay">????</div>
+
+      <div id="winnersContainer" class="winners-container"></div>
+
+      <div class="final-message" id="finalMessage" style="display:none;">
+        <h3>قرعه‌کشی با موفقیت به پایان رسید!</h3>
+      </div>
+
+      <button id="restartBtn" class="btn-restart">
+        <i class="fas fa-redo"></i> قرعه‌کشی جدید
+      </button>
     </div>
   </div>
 
   <!-- پنل مدیریت مخفی -->
   <div id="adminPanel" class="admin-panel">
     <div class="admin-box">
-      <h2>مدیریت قرعه‌کشی (مخفی)</h2>
-      <p>رمز عبور را وارد کنید:</p>
-      <input type="password" id="adminPass" class="admin-input" placeholder="رمز عبور" />
+      <h2>پنل مدیریت</h2>
+      <input type="password" id="adminPass" placeholder="رمز عبور" />
       <button id="adminLogin" class="btn-admin">ورود</button>
       <p class="admin-error" id="adminError"></p>
 
-      <div id="adminControls" style="display:none; margin-top:30px;">
-        <h3>شماره برنده دلخواه (تقلب)</h3>
-        <input type="text" maxlength="4" id="cheatInput" class="admin-input" placeholder="مثلاً ۵۶۷۸" />
-        <button id="saveCheat" class="btn-admin">ذخیره شماره برنده</button>
+      <div id="adminControls" style="display:none;">
+        <h3>شماره برنده دلخواه (نفر اول)</h3>
+        <input type="text" maxlength="4" id="cheatInput" placeholder="مثلاً 5678" />
+        <button id="saveCheat" class="btn-admin">ذخیره</button>
         <p class="admin-success" id="adminSuccess"></p>
-        <button id="adminClose" class="btn-close-admin">بستن پنل</button>
-  </div>
+        <button id="adminClose" class="btn-close-admin">بستن</button>
+      </div>
     </div>
   </div>
 
-  <script src="/js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
