@@ -19,10 +19,14 @@
 
   <!-- استایل اختصاصی -->
   <link rel="stylesheet" href="css/style.css" />
+  <!-- استایل بخش یادداشت‌ها -->
+  <link rel="stylesheet" href="css/notes.css" />
 </head>
 <body class="bg-light">
 
-  <div class="container py-5">
+  <!-- تغییر کلیدی: container → container-fluid -->
+  <div class="container-fluid py-5">
+
     <!-- هدر اصلی -->
     <div class="text-center mb-5" data-aos="fade-down">
       <h1 class="display-4 fw-bold text-success mb-3">کافی‌نت داشبورد</h1>
@@ -30,53 +34,79 @@
       <small class="text-muted">طراحی شده برای سرعت، زیبایی و راحتی مشتری</small>
     </div>
 
-    <!-- ==== سیم‌کارت و اینترنت ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title simcard">سیم‌کارت و اینترنت و قبض و شارژ</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="simcard-grid"></div>
-    </section>
+    <!-- ردیف اصلی -->
+    <div class="row g-4">
 
-    <!-- ==== قبض و پرداخت ==== -->
-    <!-- <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title bill">قبض و شارژ</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="bill-grid"></div>
-    </section> -->
+      <!-- ستون اصلی خدمات (۸ ستون) -->
+      <div class="col-lg-8 order-lg-2">
 
-    <!-- ==== خدمات قضایی و ثنا ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title justice">خدمات قضایی و ثنا</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="justice-grid"></div>
-    </section>
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title simcard">سیم‌کارت و اینترنت و قبض و شارژ</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="simcard-grid"></div>
+        </section>
 
-    <!-- ==== خودرو و حمل‌ونقل ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title car">خودرو و حمل‌ونقل</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="car-grid"></div>
-    </section>
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title justice">خدمات قضایی و ثنا</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="justice-grid"></div>
+        </section>
 
-    <!-- ==== بیمه و تأمین اجتماعی ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title insurance">بیمه و تأمین اجتماعی</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="insurance-grid"></div>
-    </section>
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title car">خودرو و حمل‌ونقل</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="car-grid"></div>
+        </section>
 
-    <!-- ==== وام و تسهیلات ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title loan">وام و تسهیلات</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="loan-grid"></div>
-    </section>
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title insurance">بیمه و تأمین اجتماعی</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="insurance-grid"></div>
+        </section>
 
-    <!-- ==== سایر خدمات ==== -->
-    <section class="category mb-5" data-aos="fade-up">
-      <h2 class="category-title other">سایر خدمات</h2>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="other-grid"></div>
-    </section>
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title loan">وام و تسهیلات</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="loan-grid"></div>
+        </section>
+
+        <section class="category mb-5" data-aos="fade-up">
+          <h2 class="category-title other">سایر خدمات</h2>
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4" id="other-grid"></div>
+        </section>
+
+      </div>
+
+      <!-- ستون یادداشت‌ها و تسک منیجر (۴ ستون) -->
+      <div class="col-lg-4 order-lg-1">
+
+        <!-- بخش یادداشت‌های شخصی -->
+        <section class="mb-5" data-aos="fade-up">
+          <h2 class="h4 fw-bold bg-primary text-white rounded-top p-3 mb-0 d-flex align-items-center">
+            <i class="fas fa-sticky-note me-2"></i> یادداشت‌های شخصی من
+          </h2>
+          <div class="bg-white rounded-bottom shadow-sm" id="notes-container">
+            <!-- یادداشت‌ها اینجا لود میشن -->
+          </div>
+        </section>
+
+        <!-- بخش تسک منیجر (جدید) -->
+        <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="h4 fw-bold bg-success text-white rounded-top p-3 mb-0 d-flex align-items-center">
+            <i class="fas fa-tasks me-2"></i> لیست کارهای من
+          </h2>
+          <div class="bg-white rounded-bottom shadow-sm" id="tasks-container">
+            <!-- تسک‌ها توسط tasks.js لود میشن -->
+          </div>
+        </section>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- اسکریپت‌ها -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+    <script src="js/tasks.js"></script>
+
+  <script src="js/notes.js"></script>
   
   <script>
     AOS.init({
