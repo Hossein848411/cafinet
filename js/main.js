@@ -63,11 +63,15 @@ const services = [
   // ===================== آموزش و کتاب =====================
   { name: "دانشگاه آزاد اسلامی", url: "https://edu.iau.ac.ir/", icon: "fa-university", category: "other" },
   { name: "کتاب‌های درسی", url: "http://irtextbook.ir", icon: "fa-book", category: "other" },
-  { name: "سامانه سیمین هدفمندی", url: "https://simin.hadafmandi.ir/login", icon: "fa-user-graduate", category: "other" },
+  { name: "اعتراض به یارانه", url: "https://hemayat.sfara.ir/", icon: "fa-user-graduate", category: "other" },
+  { name: "جداسازی یارانه", url: "http://ncr.ir/", icon: "fa-user-graduate", category: "other" },
 
   // ===================== ابزارهای کاربردی =====================
   { name: "کم کردن حجم تصاویر", url: "https://opt.imum.ir/", icon: "fa-images", category: "other" },
   { name: "قرعه‌کشی مشتریان", url: "lottery.html", icon: "fa-dice-six", category: "other" },
+{ name: " فروش پاورپوینت", url: "https://fan.sellfile.ir/", icon: "fa-file", category: "other" },
+{ name: " دوگانه سوز خودرو", url: "http://gcr.niopdc.ir/", icon: "fa-car", category: "other" },
+{ name: " سامانه واکسن", url: "https://vcr.salamat.gov.ir/fa", icon: "fa-syringe", category: "other" },
 ];
 
 // ساخت کارت
