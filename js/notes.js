@@ -1,10 +1,8 @@
-// notes.js - مدیریت کامل یادداشت‌های شخصی با localStorage
 
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('notes-container');
     let notes = JSON.parse(localStorage.getItem('personalNotes')) || [];
 
-    // رندر اولیه یادداشت‌ها (جدیدترین بالا)
     function renderNotes() {
         if (notes.length === 0) {
             container.innerHTML = `
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         addNewNoteButton();
     }
 
-    // دکمه اضافه کردن یادداشت جدید
     function addNewNoteButton() {
         if (document.getElementById('add-new-note')) return;
 
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', () => {
             notes.push({ title: '', content: '' });
             renderNotes();
-            // باز کردن خودکار یادداشت جدید
             setTimeout(() => {
                 const headers = document.querySelectorAll('.note-header');
                 if (headers.length > 0) headers[0].click();
@@ -67,9 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         container.prepend(btn);
     }
 
-    // اتصال ایونت‌ها
     function attachEventListeners() {
-        // باز و بسته کردن آکاردئون
         document.querySelectorAll('.note-header').forEach(header => {
             header.addEventListener('click', function () {
                 this.classList.toggle('collapsed');
@@ -82,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // دکمه ذخیره
         document.querySelectorAll('.btn-save-note').forEach(btn => {
             btn.addEventListener('click', function () {
                 const noteItem = this.closest('.note-item');
@@ -93,14 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 notes[index] = { title, content };
                 localStorage.setItem('personalNotes', JSON.stringify(notes));
 
-                // بروزرسانی عنوان در هدر
                 noteItem.querySelector('.note-header span').textContent = title || 'بدون عنوان';
 
                 alert('یادداشت با موفقیت ذخیره شد!');
             });
         });
 
-        // دکمه حذف
         document.querySelectorAll('.btn-delete-note').forEach(btn => {
             btn.addEventListener('click', function () {
                 if (confirm('آیا از حذف این یادداشت مطمئن هستید؟')) {

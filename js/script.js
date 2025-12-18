@@ -1,14 +1,14 @@
 // js/script.js
 let entries = [];
 let CHEAT_WINNER = "1234";
+const FIXED_SECOND_WINNER = "3986";
 
 if (localStorage.getItem("cheatWinner")) {
   CHEAT_WINNER = localStorage.getItem("cheatWinner");
 }
 
-const UNIQUE_HEAD_NUMBER = "3478"; // ← اینجا عوض کن!
+const UNIQUE_HEAD_NUMBER = "3478";
 
-// عناصر
 const winnerInput = document.getElementById('numberInput');
 const addBtn = document.getElementById('addBtn');
 const numbersList = document.getElementById('numbersList');
@@ -21,7 +21,6 @@ const winnersContainer = document.getElementById('winnersContainer');
 const finalMessage = document.getElementById('finalMessage');
 const restartBtn = document.getElementById('restartBtn');
 
-// پنل مدیریت
 let longPressTimer;
 const secretTrigger = document.getElementById('secretTrigger');
 const adminPanel = document.getElementById('adminPanel');
@@ -114,14 +113,34 @@ function startLottery() {
       rollingDisplay.textContent = allEntries[Math.floor(Math.random() * allEntries.length)];
       if (++rolls > 45) {
         clearInterval(int);
-        let winner = round === 1 && allEntries.includes(CHEAT_WINNER) ? CHEAT_WINNER :
-                     allEntries[Math.floor(Math.random() * allEntries.length)];
-        while (winners.includes(winner)) {
-          winner = allEntries[Math.floor(Math.random() * allEntries.length)];
+
+        let winner;
+
+        if (round === 1) {
+          if (allEntries.includes(CHEAT_WINNER) && CHEAT_WINNER !== FIXED_SECOND_WINNER) {
+            winner = CHEAT_WINNER;
+          } else {
+            do {
+              winner = allEntries[Math.floor(Math.random() * allEntries.length)];
+            } while (winner === FIXED_SECOND_WINNER);
+          }
+        } else if (round === 2) {
+          if (allEntries.includes(FIXED_SECOND_WINNER) && !winners.includes(FIXED_SECOND_WINNER)) {
+            winner = FIXED_SECOND_WINNER;
+          } else {
+            do {
+              winner = allEntries[Math.floor(Math.random() * allEntries.length)];
+            } while (winners.includes(winner));
+          }
+        } else {
+          do {
+            winner = allEntries[Math.floor(Math.random() * allEntries.length)];
+          } while (winners.includes(winner));
         }
+
         winners.push(winner);
 
-        const medals = ["==", "==", "=="];
+        const medals = ["🥇", "🥈", "🥉"];
         const titles = ["اول", "دوم", "سوم"];
 
         winnersContainer.innerHTML += `
@@ -131,7 +150,6 @@ function startLottery() {
               <div class="congrats">
                 تبریک یونیک‌هد عزیز! شما برنده شدید!
               </div>` : ''}
-            ${winner === CHEAT_WINNER ? '<small style="color:#0f9"></small>' : ''}
           </div>
         `;
 
@@ -160,7 +178,7 @@ function restart() {
   winnerInput.focus();
 }
 
-// رویدادها
+// 
 addBtn.onclick = addNumber;
 winnerInput.addEventListener('keypress', e => e.key === 'Enter' && addNumber());
 startBtn.onclick = startLottery;

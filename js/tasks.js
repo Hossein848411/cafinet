@@ -1,11 +1,9 @@
-// js/tasks.js - تسک منیجر اصلاح‌شده (ورژن نهایی)
 
 document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById('tasks-container');
     let tasks = JSON.parse(localStorage.getItem('myTasks')) || [];
 
     function renderTasks() {
-        // پاک کردن محتوای قبلی به جز ورودی (اگر وجود داشته باشه)
         const existingInput = container.querySelector('.task-input-wrapper');
         if (existingInput) existingInput.remove();
 
@@ -35,13 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
         }
 
-        // همیشه ورودی اضافه کردن تسک جدید رو در پایین قرار بده
         addInputBox();
         attachTaskEvents();
     }
 
     function addInputBox() {
-        // جلوگیری از اضافه شدن چندباره
         if (container.querySelector('.task-input-wrapper')) return;
 
         const inputWrapper = document.createElement('div');
@@ -74,12 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.key === 'Enter') addTask();
         });
 
-        // فوکوس خودکار روی ورودی
         input.focus();
     }
 
     function attachTaskEvents() {
-        // تیک زدن تسک
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', function () {
                 const index = parseInt(this.dataset.index);
@@ -88,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // حذف تسک
         document.querySelectorAll('button.btn-danger').forEach(btn => {
             btn.addEventListener('click', function () {
                 const index = parseInt(this.dataset.index);
@@ -105,6 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
         renderTasks();
     }
 
-    // شروع اولیه
     renderTasks();
 });
