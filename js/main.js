@@ -23,7 +23,6 @@ const services = [
   { name: "استعلام پاسپورت", url: "https://pwa.police-man.ir/#/passport", icon: "fa-passport", category: "justice" },
 
   // ===================== خودرو و حمل‌ونقل =====================
-  { name: "ایران خودرو", url: "https://ikco.ir/", icon: "fa-car", category: "car" },
   { name: "سایپا", url: "https://saipa.iranecar.com/", icon: "fa-car", category: "car" },
   { name: "بهمن موتور", url: "https://bahman.ir/", icon: "fa-car", category: "car" },
   { name: "خلافی خودرو", url: "https://sakha.epolice.ir/portal/login", icon: "fa-car-crash", category: "car" },
@@ -51,10 +50,10 @@ const services = [
   { name: "استعلام چک صیادی", url: "https://cbi.ir/EstelamSayad/24090.aspx", icon: "fa-money-check", category: "loan" },
 
   // ===================== کد پستی و پست =====================
-  { name: "تاییدیه کد پستی", url: "https://amlak.mrud.ir/", icon: "fa-map-marker-alt", category: "other" },
-  { name: "مشاهده کد پستی", url: "https://gnaf.post.ir/portal/", icon: "fa-map-marked-alt", category: "other" },
-  { name: "پست پیشتاز و مرسوله", url: "https://tracking.post.ir/", icon: "fa-truck", category: "other" },
-  { name: "سایت احراز نشانی پست", url: "https://ehraz.post.ir/", icon: "fa-map-pin", category: "other" },
+  { name: "تاییدیه کد پستی", url: "https://amlak.mrud.ir/", icon: "fa-map-marker-alt", category: "postal" },
+  { name: "مشاهده کد پستی", url: "https://gnaf.post.ir/portal/", icon: "fa-map-marked-alt", category: "postal" },
+  { name: "پست پیشتاز و مرسوله", url: "https://tracking.post.ir/", icon: "fa-truck", category: "postal" },
+  { name: "سایت احراز نشانی پست", url: "https://ehraz.post.ir/", icon: "fa-map-pin", category: "postal" },
 
   // ===================== سایر خدمات عمومی =====================
   { name: "سامانه ثبت من (احوال)", url: "https://www.sabteahval.ir/", icon: "fa-id-card", category: "other" },
@@ -62,15 +61,15 @@ const services = [
   { name: "ثبت‌نام نفت سفید", url: "https://newtejaratasan.niopdc.ir/", icon: "fa-fire", category: "other" },
 
   // ===================== آموزش و کتاب =====================
-  { name: "دانشگاه آزاد اسلامی", url: "https://edu.iau.ac.ir/", icon: "fa-university", category: "other" },
-  { name: "کتاب‌های درسی", url: "http://irtextbook.ir", icon: "fa-book", category: "other" },
+  { name: "دانشگاه آزاد اسلامی", url: "https://edu.iau.ac.ir/", icon: "fa-university", category: "education" },
+  { name: "کتاب‌های درسی", url: "http://irtextbook.ir", icon: "fa-book", category: "education" },
   { name: "اعتراض به یارانه", url: "https://hemayat.sfara.ir/", icon: "fa-user-graduate", category: "other" },
   { name: "جداسازی یارانه", url: "http://ncr.ir/", icon: "fa-user-graduate", category: "other" },
 
   // ===================== ابزارهای کاربردی =====================
   { name: "کم کردن حجم تصاویر", url: "https://opt.imum.ir/", icon: "fa-images", category: "other" },
   { name: "قرعه‌کشی مشتریان", url: "lottery.html", icon: "fa-dice-six", category: "other" },
-  { name: "فروش پاورپوینت", url: "https://fan.sellfile.ir/", icon: "fa-file", category: "other" },
+  { name: "فروش پاورپوینت", url: "https://fan.sellfile.ir/", icon: "fa-file", category: "education" },
   { name: "دوگانه سوز خودرو", url: "http://gcr.niopdc.ir/", icon: "fa-car", category: "car" },
   { name: "سامانه واکسن", url: "https://vcr.salamat.gov.ir/fa", icon: "fa-syringe", category: "other" },
 
@@ -78,11 +77,10 @@ const services = [
   { name: "سامانه سیمین", url: "https://simin.hadafmandi.ir/login", icon: "fa-database", category: "other" },
   { name: "فیش حکم بازنشستگان کشوری", url: "https://auth.cspf.ir/Auth/login", icon: "fa-file-invoice", category: "insurance" },
   { name: "ایران خودرو (فروش)", url: "https://ikcosales.ir/login", icon: "fa-car", category: "car" },
-  { name: "سایت استخدامی دستگاه های اجرایی", url: "https://hrtc.ir/", icon: "fa-briefcase", category: "other" },
-  { name: "سازمان سنجش", url: "https://sanjesh.org/fa-IR/sanjesh/4955/page/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%B3%D8%B1%D8%A7%D8%B3%D8%B1%DB%8C", icon: "fa-graduation-cap", category: "other" },
-  { name: "تبدیل خودرو به گازسوز", url: "https://gcr.niopdc.ir/Login", icon: "fa-gas-pump", category: "car" },
+  { name: "سایت استخدامی دستگاه های اجرایی", url: "https://hrtc.ir/", icon: "fa-briefcase", category: "education" },
+  { name: "سازمان سنجش", url: "https://sanjesh.org/fa-IR/sanjesh/4955/page/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%B3%D8%B1%D8%A7%D8%B3%D8%B1%DB%8C", icon: "fa-graduation-cap", category: "education" },
   { name: "پروانه اشتغال رانندگان", url: "https://utcms.ir/DriverDefault.aspx", icon: "fa-id-card", category: "car" },
-  { name: "سامانه سهام عدالت", url: "https://sahamedalat.ir/", icon: "fa-hand-holding-usd", category: "loan" },
+  { name: "سامانه سهام عدالت", url: "https://sahamedalat.ir/", icon: "fa-hand-holding-usd", category: "other" },
 ];
 
 // ساخت کارت

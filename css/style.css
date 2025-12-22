@@ -27,13 +27,16 @@ h1.display-4 {
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.simcard   { background: linear-gradient(45deg, #00c853, #64dd17); }
-.bill      { background: linear-gradient(45deg, #ff9800, #ffb74d); }
-.justice   { background: linear-gradient(45deg, #d50000, #ff1744); }
-.car       { background: linear-gradient(45deg, #2962ff, #448aff); }
-.insurance { background: linear-gradient(45deg, #6d4c41, #8d6e63); }
-.loan      { background: linear-gradient(45deg, #aa00ff, #e254ff); }
-.other     { background: linear-gradient(45deg, #607d8b, #90a4ae); }
+.simcard   { background: linear-gradient(135deg, #00c853, #00e676, #64dd17); color: white; }
+.bill      { background: linear-gradient(135deg, #ff6d00, #ff9100, #ffb74d); color: white; }
+.justice   { background: linear-gradient(135deg, #c62828, #d32f2f, #f44336); color: white; }
+.car       { background: linear-gradient(135deg, #1565c0, #1976d2, #42a5f5); color: white; }
+.insurance { background: linear-gradient(135deg, #424242, #616161, #757575); color: white; }
+.loan      { background: linear-gradient(135deg, #6a1b9a, #7b1fa2, #9c27b0); color: white; }
+.other     { background: linear-gradient(135deg, #263238, #37474f, #546e7a); color: white; }
+.education { background: linear-gradient(135deg, #0277bd, #0288d1, #039be5); color: white; }
+.postal    { background: linear-gradient(135deg, #c62828, #d32f2f, #f44336); color: white; }
+
 
 .category {
   padding: 25px;
