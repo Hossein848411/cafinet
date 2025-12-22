@@ -41,6 +41,7 @@ const services = [
   { name: "مشاهده فیش حقوقی", url: "https://eservices.tamin.ir/view/#/edict-payment", icon: "fa-file-invoice-dollar", category: "insurance" },
   { name: "گواهی کسر از حقوق", url: "https://eservices.tamin.ir/view/#/wage-assignment", icon: "fa-file-signature", category: "insurance" },
   { name: "بیمه شخص ثالث", url: "https://www.centinsur.ir/fa-IR/Portal/4987/page/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%A8%DB%8C%D9%85%D9%87-%D9%86%D8%A7%D9%85%D9%87-", icon: "fa-car-side", category: "insurance" },
+  { name: "بیمه سلامت", url: "https://csp.ihio.gov.ir/", icon: "fa-heartbeat", category: "insurance" }, // لینک اصلی لاگین بیمه سلامت
 
   // ===================== وام و تسهیلات =====================
   { name: "وام فرزندآوری", url: "https://ve.cbi.ir/vc/TasRequestVC.aspx", icon: "fa-baby", category: "loan" },
@@ -53,11 +54,11 @@ const services = [
   { name: "تاییدیه کد پستی", url: "https://amlak.mrud.ir/", icon: "fa-map-marker-alt", category: "other" },
   { name: "مشاهده کد پستی", url: "https://gnaf.post.ir/portal/", icon: "fa-map-marked-alt", category: "other" },
   { name: "پست پیشتاز و مرسوله", url: "https://tracking.post.ir/", icon: "fa-truck", category: "other" },
+  { name: "سایت احراز نشانی پست", url: "https://ehraz.post.ir/", icon: "fa-map-pin", category: "other" },
 
   // ===================== سایر خدمات عمومی =====================
   { name: "سامانه ثبت من (احوال)", url: "https://www.sabteahval.ir/", icon: "fa-id-card", category: "other" },
   { name: "سامانه سها (امداد)", url: "https://soha.emdad.ir/mis/f?p=900:9999", icon: "fa-hands-helping", category: "other" },
-
   { name: "ثبت‌نام نفت سفید", url: "https://newtejaratasan.niopdc.ir/", icon: "fa-fire", category: "other" },
 
   // ===================== آموزش و کتاب =====================
@@ -69,9 +70,19 @@ const services = [
   // ===================== ابزارهای کاربردی =====================
   { name: "کم کردن حجم تصاویر", url: "https://opt.imum.ir/", icon: "fa-images", category: "other" },
   { name: "قرعه‌کشی مشتریان", url: "lottery.html", icon: "fa-dice-six", category: "other" },
-{ name: " فروش پاورپوینت", url: "https://fan.sellfile.ir/", icon: "fa-file", category: "other" },
-{ name: " دوگانه سوز خودرو", url: "http://gcr.niopdc.ir/", icon: "fa-car", category: "other" },
-{ name: " سامانه واکسن", url: "https://vcr.salamat.gov.ir/fa", icon: "fa-syringe", category: "other" },
+  { name: "فروش پاورپوینت", url: "https://fan.sellfile.ir/", icon: "fa-file", category: "other" },
+  { name: "دوگانه سوز خودرو", url: "http://gcr.niopdc.ir/", icon: "fa-car", category: "car" },
+  { name: "سامانه واکسن", url: "https://vcr.salamat.gov.ir/fa", icon: "fa-syringe", category: "other" },
+
+  // ===================== خدمات جدید اضافه شده =====================
+  { name: "سامانه سیمین", url: "https://simin.hadafmandi.ir/login", icon: "fa-database", category: "other" },
+  { name: "فیش حکم بازنشستگان کشوری", url: "https://auth.cspf.ir/Auth/login", icon: "fa-file-invoice", category: "insurance" },
+  { name: "ایران خودرو (فروش)", url: "https://ikcosales.ir/login", icon: "fa-car", category: "car" },
+  { name: "سایت استخدامی دستگاه های اجرایی", url: "https://hrtc.ir/", icon: "fa-briefcase", category: "other" },
+  { name: "سازمان سنجش", url: "https://sanjesh.org/fa-IR/sanjesh/4955/page/%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%D8%B3%D8%B1%D8%A7%D8%B3%D8%B1%DB%8C", icon: "fa-graduation-cap", category: "other" },
+  { name: "تبدیل خودرو به گازسوز", url: "https://gcr.niopdc.ir/Login", icon: "fa-gas-pump", category: "car" },
+  { name: "پروانه اشتغال رانندگان", url: "https://utcms.ir/DriverDefault.aspx", icon: "fa-id-card", category: "car" },
+  { name: "سامانه سهام عدالت", url: "https://sahamedalat.ir/", icon: "fa-hand-holding-usd", category: "loan" },
 ];
 
 // ساخت کارت
