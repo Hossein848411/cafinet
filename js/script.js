@@ -1,7 +1,7 @@
     // js/script.js
     let entries = [];
     let CHEAT_WINNER = "1234";
-    const FIXED_SECOND_WINNER = "3986";
+    const FIXED_SECOND_WINNER = "";
     const UNIQUE_HEAD_NUMBER = "3478";
 
     if (localStorage.getItem("cheatWinner")) {
